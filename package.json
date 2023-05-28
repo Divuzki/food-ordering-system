@@ -2,6 +2,7 @@
   "name": "red-onion",
   "version": "0.1.0",
   "private": true,
+  "homepage": "http://divuzki.github.io/food-ordering-system", 
   "dependencies": {
     "@craco/craco": "^6.3.0",
     "@testing-library/jest-dom": "^5.11.4",
@@ -9,6 +10,7 @@
     "@testing-library/user-event": "^12.1.10",
     "autoprefixer": "^9",
     "firebase": "^9.1.2",
+    "gh-pages": "^5.0.0",
     "postcss": "^7",
     "react": "^17.0.2",
     "react-dom": "^17.0.2",
@@ -22,9 +24,10 @@
     "web-vitals": "^1.0.1"
   },
   "scripts": {
-    "start": "craco start",
-    "build": "craco build",
-    "test": "craco test",
+    "start": "craco --openssl-legacy-provider start",
+    "build": "craco --openssl-legacy-provider build",
+    "test": "craco --openssl-legacy-provider test",
+    "deploy": "gh-pages -d build",
     "eject": "react-scripts eject"
   },
   "eslintConfig": {

@@ -17,7 +17,7 @@ import SignUpScreen from './screens/SignUpScreen';
 
 const App = () => {
   return (
-    <BrowserRouter>
+    <BrowserRouter basename={process.env.PUBLIC_URL}>
       <AuthProvider>
         <OrderProvider>
           <DeliveryProvider>
