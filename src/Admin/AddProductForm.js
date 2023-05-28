@@ -25,7 +25,7 @@ const AddProductForm = () => {
         const newFood = { title, description, price, image, foodType }
 
         //POST 
-        fetch("http://localhost:5000/foods", {
+        fetch(`${process.env.BACKEND_URL}/foods`, {
             method: 'POST',
             headers: {
                 'content-type': 'application/json'

@@ -31,7 +31,7 @@ const useFirebase = () => {
                     displayName: name,
                     photoURL: image
                 }).then(() => {
-                    swal("Good job!", "Loggedin Successfully", "success");
+                    swal("Good job!", "Login was Successfully", "success");
                     history.push('/');
                 })
 
