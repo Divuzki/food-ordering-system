@@ -1,0 +1,24 @@
+{
+  "files": {
+    "main.css": "/food-ordering-system/static/css/main.9a60c4a4.chunk.css",
+    "main.js": "/food-ordering-system/static/js/main.968be672.chunk.js",
+    "main.js.map": "/food-ordering-system/static/js/main.968be672.chunk.js.map",
+    "runtime-main.js": "/food-ordering-system/static/js/runtime-main.aed1aaa4.js",
+    "runtime-main.js.map": "/food-ordering-system/static/js/runtime-main.aed1aaa4.js.map",
+    "static/js/2.f11969d3.chunk.js": "/food-ordering-system/static/js/2.f11969d3.chunk.js",
+    "static/js/2.f11969d3.chunk.js.map": "/food-ordering-system/static/js/2.f11969d3.chunk.js.map",
+    "index.html": "/food-ordering-system/index.html",
+    "static/css/main.9a60c4a4.chunk.css.map": "/food-ordering-system/static/css/main.9a60c4a4.chunk.css.map",
+    "static/js/2.f11969d3.chunk.js.LICENSE.txt": "/food-ordering-system/static/js/2.f11969d3.chunk.js.LICENSE.txt",
+    "static/media/index.css": "/food-ordering-system/static/media/bannerbackground.0f3b87c0.png",
+    "static/media/error.6a6554f4.png": "/food-ordering-system/static/media/error.6a6554f4.png",
+    "static/media/logo2.7419725d.png": "/food-ordering-system/static/media/logo2.7419725d.png",
+    "static/media/ordersuccess.bd98683e.png": "/food-ordering-system/static/media/ordersuccess.bd98683e.png"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.aed1aaa4.js",
+    "static/js/2.f11969d3.chunk.js",
+    "static/css/main.9a60c4a4.chunk.css",
+    "static/js/main.968be672.chunk.js"
+  ]
+}
