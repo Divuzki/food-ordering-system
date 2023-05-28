@@ -6,7 +6,7 @@ const AboutUs = () => {
 
     //fetching about us data
     useEffect(() => {
-        fetch('/aboutus.json')
+        fetch(process.env.PUBLIC_URL+'/aboutus.json')
         .then(res => res.json())
             .then(data => setAboutData(data))
     },[])
