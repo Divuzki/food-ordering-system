@@ -2,7 +2,7 @@
   "name": "red-onion",
   "version": "0.1.0",
   "private": true,
-  "homepage": "http://divuzki.github.io/food-ordering-system", 
+  "homepage": "http://divuzki.github.io/food-ordering-system",
   "dependencies": {
     "@craco/craco": "^6.3.0",
     "@testing-library/jest-dom": "^5.11.4",
