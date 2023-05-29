@@ -12,7 +12,7 @@ const ManageProductScreen = () => {
 
     //handle delete 
     const handleDelete = (id) => {
-        fetch(`${process.env.BACKEND_URL}/foods/${id}`, {
+        fetch(`${process.env.REACT_APP_BACKEND_URL}/foods/${id}`, {
             method: 'DELETE'
         }).then(res => res.json())
             .then(data => {

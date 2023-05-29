@@ -2,12 +2,14 @@ import { useEffect, useState } from 'react';
 
 const useFetch = () => {
     const [foods, setFoods] = useState([])
+    let BACKEND_URL = process.env.REACT_APP_BACKEND_URL
+    console.log(BACKEND_URL)
 
     useEffect(() => {
-        fetch(`${process.env.BACKEND_URL}/foods`)
+        fetch(`${BACKEND_URL}/foods`)
             .then(res => res.json())
             .then(data => setFoods(data))
-    }, [foods])
+    }, [BACKEND_URL, foods])
     return [foods, setFoods]
 }
 

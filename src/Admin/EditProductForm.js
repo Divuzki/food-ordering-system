@@ -13,7 +13,7 @@ const EditProductForm = () => {
     const history = useHistory();
 
     useEffect(() => {
-        fetch(`${process.env.BACKEND_URL}/foods/${id}`)
+        fetch(`${process.env.REACT_APP_BACKEND_URL}/foods/${id}`)
         .then(res => res.json())
         .then(data => setFoods(data));
     }, [id])
