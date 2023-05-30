@@ -43,7 +43,7 @@ const EditProductForm = () => {
         const updateFood = { title, description, price, image, foodType, pwd }
 
         //update 
-        fetch(`http://localhost:5000/foods/${id}`,{
+        fetch(`${process.env.REACT_APP_BACKEND_URL}/foods/${id}`,{
             method:'PUT',
             headers:{
                 'content-type':'application/json',

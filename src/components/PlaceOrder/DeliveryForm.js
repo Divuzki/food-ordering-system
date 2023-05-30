@@ -8,8 +8,8 @@ const DeliveryForm = () => {
     const { user } = useAuth()
 
     const [change, setChange] = useState({
-        country: '',
-        roadNo: '',
+        hostel: '',
+        roomNo: '',
         flatno: '',
         name: `${user.displayName}`
     })
@@ -31,8 +31,8 @@ const DeliveryForm = () => {
     const handleSubmit = (e) => {
         e.preventDefault();
         setInput({
-            country: change.country,
-            roadNo: change.roadNo,
+            hostel: change.hostel,
+            roomNo: change.roomNo,
             flatno: change.flatno,
             name: change.name
         })
@@ -47,23 +47,23 @@ const DeliveryForm = () => {
                 <div className="flex flex-col space-y-3">
                     <TextField
                         type="text"
-                        placeholder="Country and District"
-                        name="country"
-                        value={change.country}
+                        placeholder="Hostel Name"
+                        name="hostel"
+                        value={change.hostel}
                         onChange={handleChange}
                         required
                     />
                     <TextField
                         type="text"
-                        placeholder="Road Name and Road No"
-                        name="roadNo"
-                        value={change.roadNo}
+                        placeholder="Room Number"
+                        name="roomNo"
+                        value={change.roomNo}
                         onChange={handleChange}
                         required
                     />
                     <TextField
                         type="text"
-                        placeholder="Flat, suite or floor"
+                        placeholder="Flat Number"
                         name="flatno"
                         value={change.flatno}
                         onChange={handleChange}

@@ -5,21 +5,21 @@ import useAuth from '../hooks/useAuth';
 
 const SideNav = () => {
     const { user } = useAuth();
-    const [sidenav, setSidenav] = useState(false)
+    const [sidenav, setSidenav] = useState(true)
 
     //toggling the side nav
     const handlenav = () => {
         setSidenav(!sidenav);
     }
 
-    // auto hide 
-    window.addEventListener('resize', () => {
-        if(window.innerWidth < 1098){
-            setSidenav(false)
-        }else{
-            setSidenav(true)
-        }
-    })
+    // // auto hide 
+    // window.addEventListener('resize', () => {
+    //     if(window.innerWidth < 1098){
+    //         setSidenav(false)
+    //     }else{
+    //         setSidenav(true)
+    //     }
+    // })
     const menu = [
         // { id: 1, text: 'Dashboard', to: "/admin" },
         { id: 2, text: 'Manage Products', to: "/admin" },

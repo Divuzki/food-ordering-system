@@ -13,7 +13,7 @@ const PlaceOrderScreen = () => {
     const { input, disabled } = useDelivery();
     const history = useHistory();
 
-    console.log(order);
+    console.log({order, input});
     
     return (
         <main className=" h-screen banner">
@@ -31,9 +31,9 @@ const PlaceOrderScreen = () => {
                                 <div className="glass p-6 box-border rounded-lg">
                                     {/* order details  */}
                                     <div className="flex flex-col space-y-4 mb-3">
-                                        <p className="poppins text-gray-700">Deliver Place :  <span className="font-semibold text-black">{input.country ? `${input.country}` : '-----'}</span></p>
+                                        <p className="poppins text-gray-700">Deliver Place :  <span className="font-semibold text-black">{input.hostel ? `${input.hostel}` : '-----'}</span></p>
                                         <p className="poppins text-gray-700">Arriving in 20-30 min</p>
-                                        <p className="poppins text-gray-700">Road <span className="font-semibold text-black">{input.roadNo ? `${input.roadNo}` : '-----'}</span> </p>
+                                        <p className="poppins text-gray-700">Room <span className="font-semibold text-black">{input.roomNo ? `${input.roomNo}` : '-----'}</span> </p>
                                         <p className="poppins text-gray-700">Floor :  <span className="font-semibold text-black">{input.flatno ? `${input.flatno}` : '-----'}</span> </p>
                                         <p className="poppins text-gray-700">Deliver to :  <span className="font-semibold text-black">{input.name ? `${input.name}` : '-----'}</span> </p>
                                     </div>
