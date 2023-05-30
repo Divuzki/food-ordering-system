@@ -12,16 +12,22 @@ const ManageProductScreen = () => {
 
     //handle delete 
     const handleDelete = (id) => {
+        const response = window.prompt('Are you sure to delete? Type "yes" to confirm.');
+        if (response !== 'yes') {
+            return;
+        }
         const pwd = process.env.REACT_APP_AUTH_PWD;
         fetch(`${process.env.REACT_APP_BACKEND_URL}/foods/${id}`, {
             method: 'DELETE',
-            body: JSON.stringify({ pwd }),
+            headers: {
+                'authorization': pwd,
+            }
         }).then(res => res.json())
             .then(data => {
                 if (data.acknowledged) {
                     swal("Successful!", "Deleted successfully!", "success");
                     const restFoods = foods.filter(item => item._id !== id);
-                    setFoods(restFoods)
+                    setFoods([...restFoods])
                 }
             })
     }

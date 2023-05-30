@@ -17,9 +17,6 @@ const Admin = () => {
                     </div>
                     <div className="col-span-4 my-24 px-6">
                         <Switch>
-                            <PrivateRoute exact path="/admin">
-                                <ManageProductScreen />
-                            </PrivateRoute>
                             <PrivateRoute exact path="/admin/manage-products">
                                 <ManageProductScreen />
                             </PrivateRoute>

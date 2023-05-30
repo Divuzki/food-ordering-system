@@ -35,7 +35,7 @@ const Navbar = () => {
                     <>
                         <div className="flex items-center justify-end space-x-4">
                             {user.email === "admin@admin.com" && (
-                            <NavLink to="/admin" className="text-gray-600">Admin</NavLink>
+                            <NavLink to="/admin/manage-products" className="text-gray-600">Admin</NavLink>
                             )}
                             <div className="relative flex cursor-pointer" onClick={() => history.push('/orders')}>
                                 <span className="bg-primary w-6 h-6 rounded-full flex items-center justify-center text-white poppins absolute -right-2 -top-2">{order.length}</span>

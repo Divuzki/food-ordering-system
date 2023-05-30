@@ -5,24 +5,25 @@ import useAuth from '../hooks/useAuth';
 
 const SideNav = () => {
     const { user } = useAuth();
-    const [sidenav, setSidenav] = useState(true)
+    const [sidenav, setSidenav] = useState(false)
 
     //toggling the side nav
     const handlenav = () => {
         setSidenav(!sidenav);
     }
 
-    // // auto hide 
-    // window.addEventListener('resize', () => {
-    //     if(window.innerWidth < 1098){
-    //         setSidenav(false)
-    //     }else{
-    //         setSidenav(true)
-    //     }
-    // })
+    // auto hide 
+    window.addEventListener('resize', () => {
+        if(window.innerWidth < 1098){
+            setSidenav(false)
+        }else{
+            setSidenav(true)
+        }
+    })
+    
     const menu = [
         // { id: 1, text: 'Dashboard', to: "/admin" },
-        { id: 2, text: 'Manage Products', to: "/admin" },
+        { id: 2, text: 'Manage Products', to: "/admin/manage-products" },
         { id: 3, text: 'Add Product', to: "/admin/add" },
     ]
 
@@ -71,7 +72,7 @@ const SideNav = () => {
             )}
 
             {/* //menu icons  */}
-            <div className="lg:hidden fixed select-none flex gap-2 items-center px-4 bottom-10 left-10 bg-white py-2 rounded-full cursor-pointer shadow-xl border border-primary" onClick={handlenav}>
+            <div className="fixed select-none flex gap-2 items-center px-4 bottom-10 left-10 bg-white py-2 rounded-full cursor-pointer shadow-xl border border-primary" onClick={handlenav}>
                 {sidenav ? (
 
                     <MdOutlineArrowBackIos className="text-2xl text-primary" />

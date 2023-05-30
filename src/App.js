@@ -29,7 +29,7 @@ const App = () => {
               <PrivateRoute exact path="/foods/:title"><FoodDetailScreen /></PrivateRoute>
               <PrivateRoute exact path="/orders"><PlaceOrderScreen /></PrivateRoute>
               <PrivateRoute exact path="/order-successful"><OrderSuccessfulScreen /></PrivateRoute>
-              <PrivateRoute exact path="/admin"><Admin /></PrivateRoute>
+              <PrivateRoute exact path="/admin/manage-products"><Admin /></PrivateRoute>
               <Route path="*"><ErrorScreen /></Route>
             </Switch>
           </DeliveryProvider>
