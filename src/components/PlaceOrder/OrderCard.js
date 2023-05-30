@@ -14,7 +14,7 @@ const OrderCard = (props) => {
             </div>
             <div className="flex flex-col space-y-3 flex-grow">
                 <h5 className="text-base poppins text-gray-700">{props.title}</h5>
-                <h1 className="font-semibold text-lg text-primary poppins">${props.price.toFixed(2)}</h1>
+                <h1 className="font-semibold text-lg text-primary poppins">₦{props.price.toFixed(2)}</h1>
                 <p className="text-sm poppins text-gray-400">{props.type}</p>
             </div>
 

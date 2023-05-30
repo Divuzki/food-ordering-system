@@ -66,7 +66,7 @@ const ManageProductScreen = () => {
                                                 {item.title}
                                             </td>
                                             <td className="text-sm text-gray-500 px-6 py-4 whitespace-nowrap">
-                                                $ {item.price}
+                                                ₦ {item.price}
                                             </td>
                                             <td className="text-sm text-gray-500 px-6 py-4 whitespace-nowrap">
                                                 {item.foodType}

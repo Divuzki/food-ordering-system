@@ -31,7 +31,7 @@ const FoodDetailScreen = () => {
 
                             {/* price and quantity  */}
                             <div className="flex items-center justify-center md:justify-start lg:justify-start space-x-6 pt-8">
-                                <h1 className="text-3xl font-bold text-black poppins select-none">${(food.price * quantity).toFixed(2)}</h1>
+                                <h1 className="text-3xl font-bold text-black poppins select-none">₦{(food.price * quantity).toFixed(2)}</h1>
                                 {/* quantity  */}
                                 <div className="flex items-center border border-gray-200 px-4 py-2 space-x-6 rounded-full">
                                     <AiOutlineMinus onClick={() => {
