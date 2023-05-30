@@ -5,13 +5,13 @@ const AboutItem = ({ id, image, icon, title, description}) => {
         <div className="bg-white transform transition duration-700 hover:scale-105 p-6 rounded-2xl hover:shadow-xl">
             {/* image  */}
             <div className="overflow-hidden rounded-2xl flex flex-grow">
-                <img className="transform transition duration-700 hover:scale-125" src={image} alt={title} />
+                <img className="transform transition duration-700 hover:scale-125" src={process.env.PUBLIC_URL+image} alt={title} />
             </div>
             {/* other info  */}
             <div className="flex mt-6 space-x-3 ">
                 {/* icon  */}
                 <div>
-                    <img src={icon} alt={title} className="w-36"/>
+                    <img src={process.env.PUBLIC_URL+icon} alt={title} className="w-36"/>
                 </div>
                 {/* description  */}
                 <div className="flex flex-col space-y-3">

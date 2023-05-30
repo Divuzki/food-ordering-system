@@ -1,5 +1,5 @@
 import React from 'react';
-import { BrowserRouter, Route, Switch } from 'react-router-dom';
+import { Route, Switch } from 'react-router-dom';
 import Admin from './Admin/Admin';
 import Navbar from './components/Navbar/Navbar';
 import AuthProvider from './contexts/AuthProvider';
@@ -14,10 +14,11 @@ import OrderSuccessfulScreen from './screens/OrderSuccessfulScreen';
 import PlaceOrderScreen from './screens/PlaceOrderScreen';
 import SignInScreen from './screens/SignInScreen';
 import SignUpScreen from './screens/SignUpScreen';
+import { HashRouter } from 'react-router-dom/cjs/react-router-dom.min';
 
 const App = () => {
   return (
-    <BrowserRouter basename={process.env.PUBLIC_URL}>
+    <HashRouter basename={process.env.PUBLIC_URL}>
       <AuthProvider>
         <OrderProvider>
           <DeliveryProvider>
@@ -35,7 +36,7 @@ const App = () => {
           </DeliveryProvider>
         </OrderProvider>
       </AuthProvider>
-    </BrowserRouter>
+    </HashRouter>
   )
 }
 
