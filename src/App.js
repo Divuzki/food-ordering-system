@@ -18,7 +18,7 @@ import { HashRouter } from 'react-router-dom/cjs/react-router-dom.min';
 
 const App = () => {
   return (
-    <HashRouter>
+    <HashRouter basename={process.env.PUBLIC_URL}>
       <AuthProvider>
         <OrderProvider>
           <DeliveryProvider>
