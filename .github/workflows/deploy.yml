@@ -15,10 +15,10 @@ jobs:
     - name: Checkout
       uses: actions/checkout@v1
 
-    - name: Build
+    - name: Install and Build 🔧
       run: |
         npm install
-        npm run-script build
+        npm run build
       env:
         REACT_APP_API_KEY: ${{ secrets.REACT_APP_API_KEY }}
         REACT_APP_AUTH_DOMAIN: ${{ secrets.REACT_APP_AUTH_DOMAIN }}
@@ -26,9 +26,10 @@ jobs:
         REACT_APP_STORAGE_BUCKET: ${{ secrets.REACT_APP_STORAGE_BUCKET }}
         REACT_APP_MESSAGING_SENDER_ID: ${{ secrets.REACT_APP_MESSAGING_SENDER_ID }}
         REACT_APP_APP_ID: ${{ secrets.REACT_APP_APP_ID }}
+        REACT_APP_BACKEND_URL: ${{ secrets.REACT_APP_BACKEND_URL }}
+        REACT_APP_AUTH_PWD: ${{ secrets.REACT_APP_AUTH_PWD }}
 
-    - name: Deploy
+    - name: Deploy 🚀
       uses: JamesIves/github-pages-deploy-action@v4.4.2
       with:
-        branch: master
         folder: build
