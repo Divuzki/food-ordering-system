@@ -21,8 +21,8 @@ const SideNav = () => {
         }
     })
     const menu = [
-        { id: 1, text: 'Dashboard', to: "/admin" },
-        { id: 2, text: 'Manage Products', to: "/admin/manage-products" },
+        // { id: 1, text: 'Dashboard', to: "/admin" },
+        { id: 2, text: 'Manage Products', to: "/admin" },
         { id: 3, text: 'Add Product', to: "/admin/add" },
     ]
 
@@ -33,11 +33,16 @@ const SideNav = () => {
                     <nav className="flex fixed flex-col w-64 bg-primary h-screen px-4">
                         <div className="flex flex-col items-center flex-wrap mt-8 pt-12">
                             <div className="">
+                                  {user?.photoURL === null ? (
+                                <img src={process.env.PUBLIC_URL+`/user.png`} 
+                                alt={user?.displayName} className="mx-auto w-20 h-20 rounded-full" />
+                            ): (
                                 <img
                                     src={user?.photoURL}
                                     className="mx-auto w-20 h-20 rounded-full"
                                     alt={user?.displayName}
                                 />
+                            )}
                             </div>
                             <div className="pt-2">
                                 <span className="font-semibold text-lg text-white">{user?.displayName}</span>
@@ -66,7 +71,7 @@ const SideNav = () => {
             )}
 
             {/* //menu icons  */}
-            <div className="lg:hidden fixed flex gap-2 items-center px-4 bottom-10 left-10 bg-white py-2 rounded-full cursor-pointer shadow-xl border border-primary" onClick={handlenav}>
+            <div className="lg:hidden fixed select-none flex gap-2 items-center px-4 bottom-10 left-10 bg-white py-2 rounded-full cursor-pointer shadow-xl border border-primary" onClick={handlenav}>
                 {sidenav ? (
 
                     <MdOutlineArrowBackIos className="text-2xl text-primary" />

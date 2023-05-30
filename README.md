@@ -4,7 +4,7 @@ It is a single page application made with ReactJS, Tailwind CSS etc...
 
 ## Live Demo of this website :
 
-- [Live Site Link](#)
+- [Live Site Link](http://divuzki.github.io/food-ordering-system)
 
 ## Technologies
 
