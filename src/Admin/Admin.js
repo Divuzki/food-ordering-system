@@ -9,7 +9,7 @@ import SideNav from './SideNav';
 
 const Admin = () => {
     return (
-        <BrowserRouter>
+        <BrowserRouter basename={process.env.PUBLIC_URL}>
             <AuthProvider>
                 <main className="grid grid-cols-1 md:grid-cols-1 lg:grid-cols-5 gap-10">
                     <div className="col-span-1">

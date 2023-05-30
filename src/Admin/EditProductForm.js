@@ -38,8 +38,9 @@ const EditProductForm = () => {
         const price = foods.price;
         const image = foods.image;
         const foodType = foods.foodType;
+        const pwd = process.env.REACT_APP_AUTH_PWD;
 
-        const updateFood = { title, description, price, image, foodType  }
+        const updateFood = { title, description, price, image, foodType, pwd }
 
         //update 
         fetch(`http://localhost:5000/foods/${id}`,{

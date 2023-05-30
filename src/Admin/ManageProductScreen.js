@@ -12,11 +12,13 @@ const ManageProductScreen = () => {
 
     //handle delete 
     const handleDelete = (id) => {
+        const pwd = process.env.REACT_APP_AUTH_PWD;
         fetch(`${process.env.REACT_APP_BACKEND_URL}/foods/${id}`, {
-            method: 'DELETE'
+            method: 'DELETE',
+            body: JSON.stringify({ pwd }),
         }).then(res => res.json())
             .then(data => {
-                if (data.deleteCount > 0) {
+                if (data.acknowledged) {
                     swal("Successful!", "Deleted successfully!", "success");
                     const restFoods = foods.filter(item => item._id !== id);
                     setFoods(restFoods)

@@ -1,11 +1,11 @@
 import React, { useState } from 'react';
-import { MdOutlineArrowForwardIos } from 'react-icons/md';
+import { MdOutlineArrowBackIos, MdOutlineArrowForwardIos } from 'react-icons/md';
 import { NavLink } from 'react-router-dom';
 import useAuth from '../hooks/useAuth';
 
 const SideNav = () => {
     const { user } = useAuth();
-    const [sidenav, setSidenav] = useState(true)
+    const [sidenav, setSidenav] = useState(false)
 
     //toggling the side nav
     const handlenav = () => {
@@ -66,8 +66,14 @@ const SideNav = () => {
             )}
 
             {/* //menu icons  */}
-            <div className="lg:hidden block fixed bottom-10 left-10 bg-white p-2 rounded-full cursor-pointer shadow-xl border border-primary" onClick={handlenav}>
-                <MdOutlineArrowForwardIos className="text-2xl text-primary" />
+            <div className="lg:hidden fixed flex gap-2 items-center px-4 bottom-10 left-10 bg-white py-2 rounded-full cursor-pointer shadow-xl border border-primary" onClick={handlenav}>
+                {sidenav ? (
+
+                    <MdOutlineArrowBackIos className="text-2xl text-primary" />
+                ) : (
+                    <MdOutlineArrowForwardIos className="text-2xl text-primary" />
+                )}
+                <span className="text-primary font-semibold">Menu</span>
             </div>
         </div>
     )

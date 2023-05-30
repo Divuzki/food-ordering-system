@@ -22,7 +22,8 @@ const AddProductForm = () => {
     //post to database 
     const handleSubmit = e => {
         e.preventDefault()
-        const newFood = { title, description, price, image, foodType }
+        const pwd = process.env.REACT_APP_AUTH_PWD;
+        const newFood = { title, description, price, image, foodType, pwd }
 
         //POST 
         fetch(`${process.env.REACT_APP_BACKEND_URL}/foods`, {
